@@ -23,6 +23,13 @@ import org.jsoup.select.Elements;
 import introsde.quotelicious.rest.model.Quote;
 
 
+/***
+ * The resource class that implements our service endpoints for the Quote.
+ * 
+ * @author alan
+ *
+ */
+
 // @Stateless
 // @LocalBean
 @Path("/quotelicious/")
@@ -46,7 +53,7 @@ public class QuoteResource {
 	 * @return a list of quotes
 	 */
 	@GET
-	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	public List<Quote> getQuotesList() {
 		String indexUrl = null;
 		List<Quote> quotesList = new ArrayList<Quote>();
@@ -85,7 +92,7 @@ public class QuoteResource {
 	 * @return a random quote
 	 */
 	@GET
-	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Path("/random")
 	public Quote getQuote() {
 		int randomPage = ThreadLocalRandom.current().nextInt(minIndexPage, maxIndexPage+1);

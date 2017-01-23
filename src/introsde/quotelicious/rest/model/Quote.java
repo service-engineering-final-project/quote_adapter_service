@@ -8,13 +8,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
  * The JAVA class for the "quote" model.
  * 
  * @author alan
  *
  */
-
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement			// make it the root element

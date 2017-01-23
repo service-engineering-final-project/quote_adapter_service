@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="assignment02" default="install" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="quote-adapter-service" default="install" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
 
 	<!-- PART 1: Ivy properties, download, installation and configuration -->
 	<property name="ivy.install.version" value="2.4.0-rc1" />
@@ -80,7 +80,7 @@
 	
 	<target name="execute.server" depends="install">
 		<echo message="Executing the server Application..." />
-		<java classname="rest.ehealth.server.Application" classpath="${build.dir}" fork="true">
+		<java classname="introsde.quotelicious.rest.Application" classpath="${build.dir}" fork="true">
 			<arg value="$JAVA_OPTS  -cp" />
 			<classpath>
 				<path location="build" />
@@ -91,21 +91,9 @@
 			</classpath>
 		</java>
 	</target>
-		
-	<target name="execute.client" depends="install">
-		<echo message="Executing the client Application..." />
-		<java classname="rest.ehealth.client.Application" classpath="${build.dir}">
-			<classpath>
-				<fileset dir="${lib.dir}">
-					<include name="**/*.jar" />
-					<include name="*.jar" />
-				</fileset>
-			</classpath>
-		</java>
-	</target>
 	
 	<target name="create.war" depends="install">
-		<war destfile="introsde-2016-assignment-2.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
+		<war destfile="quote_adapter_service.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
 			<fileset dir="${web.dir}/WebContent">
 				<include name="**/*.*"/>
 			</fileset>
