@@ -1,6 +1,6 @@
 # Quote Adapter Service (REST)
 
-The **quote adapter service** is the service that provides data to the **storage data service** through a REST interface. It allows consumers to retrieve motivational quotes in a structured format (both XML and JSON) crawled from [Quotelicious](http://www.quotelicious.com);
+The **quote adapter service** is the service that provides data to the **storage data service** through a REST interface. It allows consumers to retrieve motivational quotes in a structured format (both XML and JSON) crawled from [Quotelicious](http://www.quotelicious.com).
 
 | resource | link |
 |----------|------|
